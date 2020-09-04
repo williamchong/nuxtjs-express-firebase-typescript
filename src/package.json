@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
+    "dev": "cd server && tsc-watch --onSuccess \"node ./lib/index.js\"",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
@@ -43,6 +43,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "ts-jest": "^26.1.3",
+    "tsc-watch": "^4.2.9",
     "vue-jest": "^3.0.4"
   }
 }
