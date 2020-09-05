@@ -1,0 +1,26 @@
+{
+  "extends": [
+      "airbnb-base",
+      "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+      "import/extensions": ["error", "always", {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+      }]
+  },
+  "settings": {
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts",".tsx"]
+       },
+       "import/resolver": {
+           "node": {
+               "extensions": [".js",".jsx",".ts",".tsx"]
+           }
+       }
+  }
+}

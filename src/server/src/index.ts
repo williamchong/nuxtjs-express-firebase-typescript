@@ -42,4 +42,4 @@ async function start() {
 }
 start();
 
-export{};
+export {};
