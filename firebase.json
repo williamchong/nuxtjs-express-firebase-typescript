@@ -1,0 +1,36 @@
+{
+  "functions": {
+    "source": "functions",
+    "predeploy": [
+      "npm --prefix src run lint",
+      "npm --prefix src run build",
+      "rm -rf functions/src/nuxt",
+      "cp -r src/.nuxt/ functions/lib/nuxt/",
+      "cp src/nuxt.config.js functions/src",
+      "cp src/nuxt.config.js functions/lib",
+      "npm --prefix functions run lint",
+      "npm --prefix functions run build"
+    ]
+  },
+  "hosting": {
+    "predeploy": [
+      "rm -rf public/* && mkdir -p public/_nuxt && cp -a src/.nuxt/dist/client/. public/_nuxt && cp -a src/static/. public/ && cp -a public_base/. public/"
+    ],
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/api/**",
+        "function": "apiHttp"
+      },
+      {
+        "source": "**",
+        "function": "ssrapp"
+      }
+    ]
+  }
+}
