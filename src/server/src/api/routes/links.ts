@@ -1,10 +1,10 @@
 import { Router } from 'express';
 
-const router = Router()
+const router = Router();
 
 /* GET users listing. */
-router.get('/links', function (req, res, next) {
+router.get('/links', function () {
   //
-})
+});
 
 export default router;

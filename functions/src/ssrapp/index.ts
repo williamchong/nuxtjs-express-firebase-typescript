@@ -3,6 +3,7 @@ import { https, config } from 'firebase-functions';
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
 import { loadNuxt } from 'nuxt';
 // TODO: use nuxt-start

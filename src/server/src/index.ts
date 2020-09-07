@@ -10,12 +10,12 @@ import api from './api';
 const app = express();
 
 async function start() {
-  const isDev = process.env.NODE_ENV !== 'production'
+  const isDev = process.env.NODE_ENV !== 'production';
   // Init Nuxt.js
   const nuxt = await loadNuxt({
     rootDir: path.join(__dirname, '../../'),
     for: isDev ? 'dev' : 'start',
-  })
+  });
 
   const {
     host = process.env.HOST || '127.0.0.1',
@@ -24,9 +24,9 @@ async function start() {
 
   // Enable live build & reloading on dev
   if (isDev) {
-    build(nuxt)
+    build(nuxt);
   }
-  await nuxt.ready()
+  await nuxt.ready();
 
   app.use('/api', api);
   app.use(cookieParser());
