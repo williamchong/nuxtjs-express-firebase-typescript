@@ -5,6 +5,7 @@ module.exports = {
     node: true,
   },
   extends: [
+    'airbnb-base',
     '@nuxtjs/eslint-config-typescript',
     'prettier',
     'prettier/vue',
@@ -13,5 +14,23 @@ module.exports = {
   ],
   plugins: ['prettier'],
   // add your custom rules here
-  rules: {},
+  rules: {
+    'import/extensions': [
+      'error',
+      'always',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
 };

@@ -3,7 +3,7 @@ import { Router } from 'express';
 const router = Router();
 
 /* GET users listing. */
-router.get('/users', function (_, res) {
+router.get('/users', (_, res) => {
   res.json({});
 });
 

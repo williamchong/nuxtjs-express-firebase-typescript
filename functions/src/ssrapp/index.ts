@@ -23,6 +23,7 @@ if ((config().sentry || {}).report_uri) {
   process.env.SENTRY_REPORT_URI = config().sentry.report_uri;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let nuxt: any;
 
 const app = express();
