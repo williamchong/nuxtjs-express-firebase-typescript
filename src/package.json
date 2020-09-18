@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "cd server && tsc-watch --onSuccess \"node ./lib/index.js\"",
-    "build": "nuxt-ts build",
+    "build": "yarn build:server && yarn build:client",
+    "build:client": "nuxt-ts build",
+    "build:server": "cd server && tsc",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
