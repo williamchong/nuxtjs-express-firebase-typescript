@@ -1,4 +1,5 @@
-# superlike-scheduler
+# nuxtjs-express-firebase-typescript
+A example repo for using nuxt.js, express, typescript with firebase hosting and cloud functions
 
 ## Build Setup
 
