@@ -5,6 +5,7 @@
       "npm --prefix src run lint",
       "npm --prefix src run build",
       "rm -rf functions/src/nuxt",
+      "mkdir -p functions/lib/nuxt/",
       "cp -r src/.nuxt/ functions/lib/nuxt/",
       "cp src/nuxt.config.js functions/src",
       "cp src/nuxt.config.js functions/lib",
